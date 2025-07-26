@@ -10,6 +10,7 @@
 ## Overview
 
 This is a project from Udemy's tutorial: The Complete JavaScript Course 2025: From Zero to Expert! by Jonas Schmedtmann. It's a learning process project. Build only for desktop users.
+Player with score above 20 wins!
 
 ### Screenshot
 
@@ -17,8 +18,8 @@ This is a project from Udemy's tutorial: The Complete JavaScript Course 2025: Fr
 
 ### Links
 
-- Solution URL: []()
-- Live Site URL: []()
+- Solution URL: [Github](https://github.com/VirginiaPat/Pig-Game-tailwind.git)
+- Live Site URL: [Netlify](https://pig-game-virgi.netlify.app/)
 
 ## My process
 
