@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+/*
+  The default border color has changed to `currentColor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentColor);
+  }
+}
+
+@theme {
+  /* color */
+  --color-grey-extra-dark: #2f2f2f;
+  --color-grey-dark: #333;
+  --color-grey-medium: #444;
+  --color-grey-light: #ddd;
+  --color-purple-gradient: #753682;
+  --color-orange-gradient: #bf2e34;
+  --color-orange: #c7365f;
+  --color-bg-grey-op35: rgba(255, 255, 255, 0.35);
+  --color-bg-grey-op40: rgba(255, 255, 255, 0.4);
+  --color-bg-grey-op60: rgba(255, 255, 255, 0.6);
+
+  /* font-family */
+  --font-nunito: "Nunito", "sans-serif";
+
+  /* box-shadow */
+  --box-shadow-main: 0 3rem 5rem rgba(0, 0, 0, 0.25);
+  --box-shadow-dice: 0 2rem 5rem rgba(0, 0, 0, 0.2);
+  --box-shadow-btn-active: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+  --box-shadow-btn: 0 1.75rem 3.5rem rgba(0, 0, 0, 0.1);
+}
+
+/* classes for javascript */
+/* .player--active {
+  background-color: rgba(255, 255, 255, 0.4);
+} */
+/* .player--active .name {
+  font-weight: 600;
+} */
+/* .player--active .score {
+  font-weight: 400;
+} */
+
+/* .player--active .current {
+  opacity: 1;
+} */
+
+/* .player--winner {
+  background-color: #2f2f2f;
+} */
+
+.player--winner .name {
+  font-weight: 600;
+  color: #c7365f;
+}

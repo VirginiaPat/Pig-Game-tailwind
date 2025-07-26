@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Pig Game</title>
+  </head>
+  <body
+    class="font-(family-name:--font-nunito) font-normal h-[100vh] text-(--color-grey-dark) bg-linear-to-br from-orange-gradient to-purple-gradient flex flex-col items-center justify-center"
+  >
+    <!-- in the main i didn't add filter: blur(); that is in the class main -->
+    <main
+      class="relative w-250 h-150 bg-(--color-bg-grey-op35) backdrop-blur-[12.5rem] shadow-(--box-shadow-main) rounded-lg overflow-hidden flex"
+    >
+      <!-- PLAYER 0 SECTION -->
+      <!-- in the beginning player 0 has the active class ( section::add: bg-(--color-bg-grey-op40), h2::instead of font-medium set font semi-bold in score:font-normal instead of medium, current:opacity:100 instead of 80)-->
+      <section
+        id="player--0"
+        class="p-22.5 flex flex-col flex-[50%] items-center transition-all duration-75 bg-(--color-bg-grey-op40)"
+      >
+        <h2
+          id="name--0"
+          class="relative text-[2.5rem] uppercase tracking-[1px] [word-spacing:2px] font-semibold mb-2.5"
+        >
+          Player 1
+        </h2>
+        <p
+          id="score--0"
+          class="text-[5rem] font-normal text-(--color-orange) mb-auto"
+        >
+          43
+        </p>
+        <div
+          id="current-bg--0"
+          class="bg-(--color-orange) opacity-100 rounded-lg text-white w-[65%] p-5 text-center transition-all duration-75"
+        >
+          <p
+            class="uppercase mb-2.5 text-[1.0625rem] text-(--color-grey-light)"
+          >
+            Current
+          </p>
+          <p id="current--0" class="text-4xl">0</p>
+        </div>
+
+        <!-- PLAYER 1 SECTION -->
+      </section>
+      <section
+        id="player--1"
+        class="p-22.5 flex flex-col flex-[50%] items-center transition-all duration-75"
+      >
+        <h2
+          id="name--1"
+          class="relative text-[2.5rem] uppercase tracking-[1px] [word-spacing:2px] font-medium mb-2.5"
+        >
+          Player 2
+        </h2>
+        <p
+          id="score--1"
+          class="text-[5rem] font-medium text-(--color-orange) mb-auto"
+        >
+          24
+        </p>
+        <div
+          id="current-bg--1"
+          class="bg-(--color-orange) opacity-80 rounded-lg text-white w-[65%] p-5 text-center transition-all duration-75"
+        >
+          <p
+            class="uppercase mb-2.5 text-[1.0625rem] text-(--color-grey-light)"
+          >
+            Current
+          </p>
+          <p id="current--1" class="text-4xl">0</p>
+        </div>
+      </section>
+
+      <!-- DICE IMAGE -->
+      <img
+        id="dice"
+        src="dice-5.png"
+        alt="Playing dice"
+        class="absolute left-[50%] top-41.25 -translate-x-[50%] h-25 shadow-(--box-shadow-dice)"
+      />
+
+      <!-- BUTTONS -->
+      <button
+        id="btn--new"
+        class="absolute left-[50%] top-10 -translate-x-[50%] text-(--color-grey-medium) bg-none border-none text-lg uppercase cursor-pointer font-normal transition-all duration-20 bg-(--color-bg-grey-op60) pt-1.75 pb-1.75 pl-6.25 pr-6.25 rounded-[31.25rem] shadow-(--box-shadow-btn) backdrop-blur-[0.625rem] active:-translate-x-[50%] active:translate-y-[3px] active:shadow-(--box-shadow-btn-active)"
+      >
+        <span class="text-2xl inline-block mr-1.75">🔄</span> New game
+      </button>
+      <button
+        id="btn--roll"
+        class="absolute left-[50%] top-98.25 -translate-x-[50%] text-(--color-grey-medium) bg-none border-none text-lg uppercase cursor-pointer font-normal transition-all duration-20 bg-(--color-bg-grey-op60) pt-1.75 pb-1.75 pl-6.25 pr-6.25 rounded-[31.25rem] shadow-(--box-shadow-btn) backdrop-blur-[0.625rem] active:-translate-x-[50%] active:translate-y-[3px] active:shadow-(--box-shadow-btn-active)"
+      >
+        <span class="text-2xl inline-block mr-1.75">🎲</span> Roll dice
+      </button>
+      <button
+        id="btn--hold"
+        class="absolute left-[50%] top-115.25 -translate-x-[50%] text-(--color-grey-medium) bg-none border-none text-lg uppercase cursor-pointer font-normal transition-all duration-20 bg-(--color-bg-grey-op60) pt-1.75 pb-1.75 pl-6.25 pr-6.25 rounded-[31.25rem] shadow-(--box-shadow-btn) backdrop-blur-[0.625rem] active:-translate-x-[50%] active:translate-y-[3px] active:shadow-(--box-shadow-btn-active)"
+      >
+        <span class="text-2xl inline-block mr-1.75">📥</span> Hold
+      </button>
+    </main>
+
+    <footer class="flex items-center pt-2">
+      <p class="text-(--color-grey-light)">
+        From Udemy:<a
+          class="transition-all duration-20 hover:text-(--color-bg-grey-op40) active:text-(--color-bg-grey-op40) focus:text-(--color-orange) focus:outline-4 focus:outline-(--color-orange) focus:bg-white"
+          href="https://www.udemy.com/course/the-complete-javascript-course/"
+          target="_blank"
+          >&nbsp;The Complete JavaScript Course 2025: From Zero to Expert!</a
+        >
+        by
+        <a
+          class="transition-all duration-20 hover:text-(--color-bg-grey-op40) active:text-(--color-bg-grey-op40) focus:text-(--color-orange) focus:outline-4 focus:outline-(--color-orange) focus:bg-white"
+          target="_blank"
+          href="https://twitter.com/jonasschmedtman"
+          >Jonas Schmedtmann</a
+        >
+      </p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
